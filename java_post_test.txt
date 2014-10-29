@@ -1,0 +1,25 @@
+1. b tulis source code -> compile -> run
+2. c.Aplikasi java dapat dijalankan diberbagai macam sistem operasi
+3. a.JRE
+4. c.Microsoft Word
+5. c.Main method tidak harus berada di dalam sebuah class
+6. c.compile error
+7. c.30
+8. a.fruits[2]
+9. a.C
+10.b.1 3 5 7 9
+11.c.NullPointerException
+12.d.40
+13.c.9
+14.d.compile error
+15.b.100
+16.c.compile error
+17.a.myMethod A
+18.a.myMethod A
+19.b.myMethod B
+20.c.compile error
+21.c.compile error
+22.c.account
+23.b.4
+24.d.dog
+25.b.15
