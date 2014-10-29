@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>Login</h:head>
+<body>
+
+	<ui:composition template="/template/bootstrap.xhtml">
+
+<ui:define name="panelHeadingCat">Category</ui:define> 
+	<ui:define name="contentCat">
+
+					<ul class="list-group">
+							<li class="list-group-item">
+							<h:link value="[All Products]" outcome="/product/list.xhtml">
+								</h:link></li>
+						<ui:repeat var="c" value="#{shopController.allCategories}">
+							<li class="list-group-item">
+							<h:link value="#{c.name}" outcome="/product/list.xhtml">
+									<f:param name="id" value="#{c.id}" />
+								</h:link></li>
+						</ui:repeat>
+					</ul>
+
+				</ui:define>
+		<ui:define name="panelHeading">
+			<h3>Login Admin</h3>
+		</ui:define>
+
+		<ui:define name="content">
+
+			<h:form>
+				<div class="form-group">
+					<label for="usr">Email:</label>
+					<h:inputText value="#{loginAdminController.email}" required="true"
+						label="Username" class="form-control" />
+				</div>
+				<div class="form-group">
+					<label for="pwd">Password:</label>
+					<h:inputSecret value="#{loginAdminController.password}"
+						required="true" redisplay="true" label="kata sandi" class="form-control">
+						<f:validateLength maximum="50" minimum="5" />
+					</h:inputSecret>
+				</div>
+				<h:commandButton action="#{loginAdminController.login}" value="Login"
+				 />
+
+			</h:form>
+		</ui:define>
+
+	</ui:composition>
+
+</body>
+</html>
